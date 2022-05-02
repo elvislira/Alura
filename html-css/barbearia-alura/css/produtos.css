@@ -1,0 +1,33 @@
+.principal-produtos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    height: 330px;
+    border: 1px solid #000000;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 15%;
+    text-align: center;
+}
+
+.produto h2 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.produto p {
+    font-style: italic;
+}
+
+.preco {
+    font-weight: bold;
+    margin-top: 10px;
+}

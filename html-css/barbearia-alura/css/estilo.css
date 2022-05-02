@@ -39,8 +39,11 @@
 .sobre {
     background-color: #d1cecc;
     padding: 20px 15%;
-    text-align: justify;
     line-height: 30px;
+}
+
+.justificado {
+    text-align: justify;
 }
 
 .subtitulo {
@@ -68,7 +71,7 @@
 
 .rodape {
     text-align: center;
-    height: 45px;
+    height: 100px;
     display: flex;
     justify-content: center;
 }
