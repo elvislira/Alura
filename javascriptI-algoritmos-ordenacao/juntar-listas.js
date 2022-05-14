@@ -35,5 +35,3 @@ export const juntarListas = (lista1, lista2) => {
 
     return listaUnica
 }
-
-console.log(juntarListas(edFolha, edGalho))
