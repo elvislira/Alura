@@ -1,23 +1,11 @@
-import { tabelaLivros } from "./lista-livros.js"
-
-// const listaNumeros = [50, 15, 25, 35, 6, 45]
-
-
-export function menorNumero(arrayNumeros, posicaoInicial) {
+export const indiceMenorNumero = (array, posicaoInicial) => {
     let indiceMenor = posicaoInicial
-    let indiceAtual = posicaoInicial
-
-    for (let indice = posicaoInicial; indice < arrayNumeros.length; indice++) {
-        indiceAtual = indice
-
-        if (arrayNumeros[indiceAtual].preco < arrayNumeros[indiceMenor].preco) {
+ 
+    for (let indiceAtual = posicaoInicial; indiceAtual < array.length; indiceAtual++) {
+        if (array[indiceAtual] < array[indiceMenor]) {
             indiceMenor = indiceAtual
-            indiceAtual = indice
         }
     }
-
+ 
     return indiceMenor
 }
-
-
-// console.log(menorNumero(tabelaLivros, 0))

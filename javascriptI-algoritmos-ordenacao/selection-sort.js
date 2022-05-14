@@ -1,21 +1,15 @@
-import { tabelaLivros } from "./lista-livros.js";
-import { menorNumero } from "./menor-valor.js";
-
-function selectionSort(array) {
-    let arrayOrdenado = array
-
-    for (let indice = 0; indice < arrayOrdenado.length; indice++) {
-        let menorNum = menorNumero(arrayOrdenado, indice)
-
-        let itemAtual = arrayOrdenado[indice]
-        let itemMenor = arrayOrdenado[menorNum]
-
-        let livroAtual = arrayOrdenado[menorNum]
-        arrayOrdenado[menorNum] = arrayOrdenado[indice]
-        arrayOrdenado[indice] = livroAtual
+import { listaPrecos } from "./tabela-livros.js"
+import { indiceMenorNumero } from "./menor-valor.js"
+ 
+export const selectionSort = (tabelaLivros) => {
+    let tabela = tabelaLivros
+ 
+    for (let indiceAtual = 0; indiceAtual < tabela.length; indiceAtual++) {
+        let indiceMenorValor = indiceMenorNumero(listaPrecos(), indiceAtual)
+        let livroAtual = tabela[indiceAtual]
+        tabela[indiceAtual] = tabela[indiceMenorValor]
+        tabela[indiceMenorValor] = livroAtual
     }
-
-    return arrayOrdenado
+ 
+    return tabela
 }
-
-console.log(selectionSort(tabelaLivros))
