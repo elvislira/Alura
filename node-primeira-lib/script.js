@@ -10,7 +10,7 @@ function extrairLinks(texto) {
         arrayResultado.push({ [temp[1]]: temp[2] })
     }
 
-    return arrayResultado
+    return arrayResultado.length === 0 ? 'Não há links' : arrayResultado
 }
 
 function tratarErro(erro) {
@@ -22,7 +22,7 @@ export async function lerArquivoAsyncAwait(caminhoArquivo) {
 
     try {
         const texto = await promises.readFile(caminhoArquivo, encoding)
-        console.log(extrairLinks(texto))
+        return extrairLinks(texto)
     } catch (erro) {
         tratarErro(erro)
     }
@@ -47,7 +47,3 @@ function lerArquivoSemPromise(caminhoArquivo) {
         console.log(chalk.bgBlackBright(conteudoArquivo))
     })
 }
-
-// console.log(lerArquivoAsyncAwait('./arquivos/texto1.md'))
-
-//  \[[^\]]*\]\((https?:\/\/[^$#\s]*)\)
